@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.3.0.3248"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model ID="{0AD192E4-27CB-4B0A-9E10-8255C8B2B36D}" Name="UIK life" Selected="Yes" Type="{1E597170-9350-11D1-AB3C-0020AF71E433}" URL="UIK_life.mcd"/>
+		<Model ID="{9BEAF02F-2AD0-4DEA-8A8D-727B2665601C}" Name="UIK life" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="UIK life.mld"/>
+		<Model ID="{5527C8C2-BE5E-4CB2-8F90-387DCA20FC26}" Name="UIK life" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="UIK life.mpd"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>
