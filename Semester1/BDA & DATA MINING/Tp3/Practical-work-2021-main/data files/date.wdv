@@ -1,0 +1,10 @@
+#SCRIPT('WDANA', '', '17.0.59.0', '')
+#LOG()
+
+Version(1700)
+SetAnalysis('D:\PFEGL'2020\Mon_Projet\Repo.ana\Repo.wdd','')
+SetConnection('Text','','D:\cours 2017 2018\Base de données et datamining GL\cours 2018 2019\TP SSB\Data\data files\date.txt','system','xHLEcg','')
+SetTextSeparators('49','22','0D0A','')
+AddTable('date','D:\PFEGL'2020\Mon_Projet\Exe\date.FIC','date','', 0)
+InstallDir('D:\PFEGL'2020\Mon_Projet\Exe\')
+Run()

@@ -1,0 +1,5 @@
+load data
+  infile 'E:\Mes documents\document doctorat\thèse master 2017 2017\AEK\thesisTayebLoumani\thesis-03-04-2017\ssb\data files\supplier.txt'
+  into table BI.supplier
+  fields terminated by "|" optionally enclosed by '"'
+(S_SUPPKEY, S_NAME,  S_ADDRESS, S_CITY, S_NATION, S_REGION, S_PHONE)

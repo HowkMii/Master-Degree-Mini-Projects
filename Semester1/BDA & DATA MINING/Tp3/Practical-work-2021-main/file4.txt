@@ -1,0 +1,5 @@
+load data
+  infile 'E:\Mes documents\document doctorat\thèse master 2017 2017\AEK\thesisTayebLoumani\thesis-03-04-2017\ssb\data files\date.txt'
+  into table BI.dates
+  fields terminated by "|" optionally enclosed by '"'
+(D_DATEKEY, D_DATE, D_DAYOFWEEK, D_MONTH, D_YEAR, D_YEARMONTHNUM, D_YEARMONTH, D_DAYNUMINWEEK, D_DAYNUMINMONTH, D_DAYNUMINYEAR, D_MONTHNUMINYEAR, D_WEEKNUMINYEAR, D_SELLINGSEASON, D_LASTDAYINWEEKFL, D_LASTDAYINMONTHFL, D_HOLIDAYFL, D_WEEKDAYFL)

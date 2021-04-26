@@ -1,0 +1,5 @@
+load data
+  infile 'E:\Mes documents\document doctorat\thèse master 2017 2017\AEK\thesisTayebLoumani\thesis-03-04-2017\ssb\data files\customer.txt'
+  into table BI.customer
+  fields terminated by "|" optionally enclosed by '"'
+(C_CUSTKEY, C_NAME, C_ADDRESS, C_CITY, C_NATION, C_REGION, C_PHONE, C_MKTSEGMENT)
