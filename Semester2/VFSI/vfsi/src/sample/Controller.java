@@ -13,20 +13,18 @@ public class Controller implements Initializable {
     @FXML
     private Label lblSalleAttente, lblSalleExamen, lblMedecineDisponible;
 
-    @FXML
-    private ListView<String> listMaquette;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        listMaquette.getItems().add("M[10, 1, 0]");
+
     }
 
     @FXML
-    private void onStartSimulation() {
+    private void onStart() {
         new Thread() {
             @Override
             public void run() {
-                assert 1 == 0;
                 while (Integer.parseInt(lblSalleAttente.getText()) > 0) {
                     if (Integer.parseInt(lblMedecineDisponible.getText()) > 0) {
                         addValue(lblSalleExamen, 2);
@@ -43,15 +41,9 @@ public class Controller implements Initializable {
                     addValue(lblSalleExamen, -2);
                     addValue(lblMedecineDisponible, 1);
 
-                    cleanValue(lblSalleExamen);
-                    cleanValue(lblMedecineDisponible);
 
-                    Platform.runLater(new Runnable() {
-                        @Override
-                        public void run() {
-                            listMaquette.getItems().add("M[" + lblSalleAttente.getText() + ", " + lblMedecineDisponible.getText() + ", " + lblSalleExamen.getText() + "]");
-                        }
-                    });
+
+
 
                     try {
                         Thread.sleep(1000);
