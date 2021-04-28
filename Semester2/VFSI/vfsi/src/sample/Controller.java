@@ -1,17 +1,14 @@
 package sample;
-
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     @FXML
-    private Label lblSalleAttente, lblSalleExamen, lblMedecineDisponible;
+    private Label lblSalleA, lblSalleE, lblMedecineD;
 
 
 
@@ -25,11 +22,13 @@ public class Controller implements Initializable {
         new Thread() {
             @Override
             public void run() {
-                while (Integer.parseInt(lblSalleAttente.getText()) > 0) {
-                    if (Integer.parseInt(lblMedecineDisponible.getText()) > 0) {
-                        addValue(lblSalleExamen, 2);
-                        addValue(lblSalleAttente, -1);
-                        addValue(lblMedecineDisponible, -1);
+
+
+                while (Integer.parseInt(lblSalleA.getText()) > 0) {
+                    if (Integer.parseInt(lblMedecineD.getText()) > 0) {
+                        addValue(lblSalleE, 2);
+                        addValue(lblSalleA, -1);
+                        addValue(lblMedecineD, -1);
                     }
 
                     try {
@@ -38,8 +37,8 @@ public class Controller implements Initializable {
                         ie.printStackTrace();
                     }
 
-                    addValue(lblSalleExamen, -2);
-                    addValue(lblMedecineDisponible, 1);
+                    addValue(lblSalleE, -2);
+                    addValue(lblMedecineD, 1);
 
 
 
@@ -51,7 +50,7 @@ public class Controller implements Initializable {
                         ie.printStackTrace();
                     }}
 
-                System.out.println(Integer.parseInt(lblSalleAttente.getText()) == 0);
+                System.out.println(Integer.parseInt(lblSalleA.getText()) == 0);
             }
 
         }.start();

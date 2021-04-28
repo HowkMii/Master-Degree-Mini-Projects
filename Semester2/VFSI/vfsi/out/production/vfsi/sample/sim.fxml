@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="455.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+
+      <Line fx:id="l4" endX="2.0" endY="56.0" layoutX="275.0" layoutY="283.0" startX="2.0" startY="-12.0" />
+      <Line fx:id="l2" endX="100.0" layoutX="352.0" layoutY="182.0" startX="-100.0" />
+      <Line fx:id="l" endX="2.0" endY="56.0" layoutX="275.0" layoutY="193.0" startX="2.0" startY="-12.0" />
+      <Line fx:id="l1" endX="2.0" endY="56.0" layoutX="275.0" layoutY="123.0" startX="2.0" startY="-12.0" />
+      <Line fx:id="l0" endX="2.0" endY="56.0" layoutX="275.0" layoutY="33.0" startX="2.0" startY="-12.0" />
+        
+        <Button layoutX="241.0" layoutY="364.0" onAction="#onStart" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #000000;" text="Start " textFill="WHITE">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="15.0" layoutX="225.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+      <Circle layoutX="276.0" layoutY="95.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle layoutX="437.0" layoutY="181.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle layoutX="276.0" layoutY="252.0" radius="34.0" stroke="BLACK" strokeType="INSIDE" />
+        <Label fx:id="lblMedecineD" layoutX="430.0" layoutY="164.0" text="1" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblSalleA" layoutX="262.0" layoutY="78.0" text="10" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="15.0" layoutX="225.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+        <Label fx:id="lblSalleE" layoutX="269.0" layoutY="235.0" text="0" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="15.0" layoutX="225.0" layoutY="324.0" stroke="BLACK" strokeType="INSIDE" width="102.0" />
+    </children>
+</AnchorPane>

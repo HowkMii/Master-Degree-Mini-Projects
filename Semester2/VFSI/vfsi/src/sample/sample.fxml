@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="200.0" prefWidth="346.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <Label fx:id="lblSalleAttente" layoutX="121.0" layoutY="77.0" text="10" textAlignment="CENTER" textFill="#005280">
+        <Label fx:id="lblSalleAttente" layoutX="121.0" layoutY="77.0" text="29" textAlignment="CENTER" textFill="#005280">
             <font>
                 <Font name="System Bold" size="24.0" />
             </font>
