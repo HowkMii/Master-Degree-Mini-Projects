@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="844.0" prefWidth="1372.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Circle layoutX="225.0" layoutY="255.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+        <Circle layoutX="418.0" layoutY="383.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+        <Label fx:id="l3" layoutX="220.0" layoutY="240.0" text="0" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="l6" layoutX="413.0" layoutY="368.0" text="1" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+      <Circle layoutX="634.0" layoutY="255.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle layoutX="828.0" layoutY="383.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle layoutX="628.0" layoutY="496.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="l4" layoutX="629.0" layoutY="241.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="l10" layoutX="623.0" layoutY="481.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="l7" layoutX="823.0" layoutY="368.0" text="1" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle layoutX="1038.0" layoutY="256.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle layoutX="1150.0" layoutY="383.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="l5" layoutX="1033.0" layoutY="240.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="l8" layoutX="1145.0" layoutY="368.0" text="1" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle layoutX="223.0" layoutY="119.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="l0" layoutX="209.0" layoutY="104.0" text="10" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle layoutX="633.0" layoutY="119.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="l1" layoutX="617.0" layoutY="104.0" text="10" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle layoutX="1043.0" layoutY="119.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="l2" layoutX="1028.0" layoutY="104.0" text="10" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle layoutX="1038.0" layoutY="496.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="l11" layoutX="1033.0" layoutY="481.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle layoutX="225.0" layoutY="496.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="l9" layoutX="220.0" layoutY="481.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle layoutX="628.0" layoutY="634.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="l12" layoutX="623.0" layoutY="619.0" text="2" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+    <!--
+        <JFXButton buttonType="RAISED" layoutX="563.0" layoutY="474.0" onAction="#onStartSimulation" prefHeight="40.0" prefWidth="176.0" style="-fx-background-color: #2196f3;" text="Start simulation" textFill="WHITE">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </JFXButton>
+        -->
+    </children>
+</AnchorPane>
