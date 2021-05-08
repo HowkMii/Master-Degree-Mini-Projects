@@ -21,3 +21,7 @@ table{
     top: 98px;
     border-spacing: 0px;
 }
+td{
+    width: 94px;
+    height: 94px;
+}
