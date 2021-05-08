@@ -25,3 +25,10 @@ td{
     width: 94px;
     height: 94px;
 }
+form{
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    padding: 15px;
+    background-color: rgb(83, 175, 19);
+}
