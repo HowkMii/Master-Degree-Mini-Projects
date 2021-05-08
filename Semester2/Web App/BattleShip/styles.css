@@ -15,3 +15,9 @@ div#messageArea {
     color: rgb(83, 175, 19);
     font-size: 20px;
 }
+table{
+    position: absolute;
+    left: 173px;
+    top: 98px;
+    border-spacing: 0px;
+}
