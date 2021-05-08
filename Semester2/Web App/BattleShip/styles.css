@@ -8,3 +8,10 @@ div#board {
     margin: auto;
     background: url("board.jpg") no-repeat;
 }
+div#messageArea {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    color: rgb(83, 175, 19);
+    font-size: 20px;
+}
