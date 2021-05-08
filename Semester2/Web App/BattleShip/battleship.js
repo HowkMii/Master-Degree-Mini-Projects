@@ -58,6 +58,13 @@ var model = {
         return true;
     },
  generateShipLocations: function() {
-       
+        var locations;
+        for(var i=0; i<this.numOfShips; i++) {
+            do{
+                locations = this.generateShip();
+            }while(this.isColliding(locations));
+            this.ships[i].locations = locations;
+        }
+		
     },
 window.onload = init;
