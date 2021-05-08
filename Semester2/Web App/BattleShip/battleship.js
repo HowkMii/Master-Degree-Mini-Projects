@@ -82,4 +82,17 @@ var model = {
         }
         return newShipLocations;
     },
+    isColliding: function(inputlocations){
+        for(var i=0; i<this.numOfShips-1; i++){
+            var ship = this.ships[i];
+            for(var j=0; j<inputlocations.length; j++){
+                if(ship.locations.indexOf(inputlocations[j])>=0){
+                    //this means the ith inputLocation is already occupied.
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+};
 window.onload = init;
