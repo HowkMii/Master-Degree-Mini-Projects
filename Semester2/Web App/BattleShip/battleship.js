@@ -18,5 +18,8 @@ var view = {
 var model = {
     boardSize: 7,
     numOfShips: 3,
+	shipsSunk: 0,
+    shipLength: 3, 
+    ships:
 
 window.onload = init;
