@@ -38,4 +38,8 @@ var model = {
 				ship.hits[index] = "hit";
                 view.displayHit(guess);
                 view.displayMessage("HIT!");
+				if(this.isSunk(ship)){
+                    view.displayMessage("You sank my battleship!");
+                    this.shipsSunk++;
+                }
 window.onload = init;
