@@ -149,5 +149,12 @@ function handleFireButton() {
 
     guessInput.value = ""; // clears the form field.
 }
+function handleKeyPress(e) {
+    var fireButton = document.getElementById('fireButton');
+    if(e.keyCode === 13){
+        fireButton.click();
+        return false; // so the form does not submit itself.
+    }
+}
 
 window.onload = init;
