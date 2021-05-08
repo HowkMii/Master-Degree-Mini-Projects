@@ -132,4 +132,13 @@ function parseGuess(guess){
     }
     return null;
 }
+function init() {
+    var fireButton = document.getElementById('fireButton');
+    fireButton.onclick = handleFireButton;
+
+    var guessInput = document.getElementById('guessInput');
+    guessInput.onkeypress = handleKeyPress;
+
+    model.generateShipLocations();
+}
 window.onload = init;
