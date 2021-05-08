@@ -24,5 +24,16 @@ var model = {
         { locations: [0, 0, 0], hits: ["", "", ""] },
         { locations: [0, 0, 0], hits: ["", "", ""] }
     ],
+	 fire: function(guess) {
+        for(var i=0; i<this.numOfShips; i++){
+            var ship = this.ships[i];
+            var index = ship.locations.indexOf(guess);
+            if(index >= 0){
+                //It's a hit
+                if(ship.hits[index]=="hit"){
+                    view.displayMessage("You've already hit this location! Enter some other coordinates");
+                    controller.guesses--;
+                    return false;
+                }
 
 window.onload = init;
