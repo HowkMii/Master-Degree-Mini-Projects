@@ -20,6 +20,9 @@ var model = {
     numOfShips: 3,
 	shipsSunk: 0,
     shipLength: 3, 
-    ships:
+    ships: { locations: [0, 0, 0], hits: ["", "", ""] },
+        { locations: [0, 0, 0], hits: ["", "", ""] },
+        { locations: [0, 0, 0], hits: ["", "", ""] }
+    ],
 
 window.onload = init;
