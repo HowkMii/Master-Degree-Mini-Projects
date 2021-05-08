@@ -56,15 +56,30 @@ var model = {
             }
         }
         return true;
-    },
- generateShipLocations: function() {
-        var locations;
-        for(var i=0; i<this.numOfShips; i++) {
-            do{
-                locations = this.generateShip();
-            }while(this.isColliding(locations));
-            this.ships[i].locations = locations;
+
+     generateShip: function(){
+        var direction = Math.floor(Math.random()*2);
+        var row, col;
+        var newShipLocations=[];
+
+        if(direction === 1){
+            //direction is vertical
+            row = Math.floor(Math.random()* (this.boardSize- this.shipLength + 1));
+            col = Math.floor(Math.random()* (this.boardSize));
         }
-		
+        else{
+            row = Math.floor(Math.random()* (this.boardSize));
+            col = Math.floor(Math.random()* (this.boardSize - this.shipLength + 1));
+        }
+
+        for(var i=0; i<this.shipLength; i++){
+            if(direction==1){
+                newShipLocations.push((row+i) + "" + col);
+            }
+            else{
+                newShipLocations.push(row + "" + (col+i));
+            }
+        }
+        return newShipLocations;
     },
 window.onload = init;
