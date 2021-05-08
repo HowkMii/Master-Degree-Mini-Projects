@@ -111,4 +111,8 @@ var controller = {
         }
     }
 };
+function parseGuess(guess){
+   
+    return null;
+}
 window.onload = init;
