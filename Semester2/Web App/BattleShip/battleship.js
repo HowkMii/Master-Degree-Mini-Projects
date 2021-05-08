@@ -42,4 +42,7 @@ var model = {
                     view.displayMessage("You sank my battleship!");
                     this.shipsSunk++;
                 }
+				                return true;
+            }
+        }
 window.onload = init;
