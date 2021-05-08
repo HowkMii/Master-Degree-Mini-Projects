@@ -117,7 +117,12 @@ function parseGuess(guess){
     if(guess == null || guess.length !== 2){
         alert("Oops, please enter a letter and a number on the board.");
     } else{
-        
+        guess = guess.toUpperCase();
+        firstChar = guess.charAt(0);
+        var row = alphabet.indexOf(firstChar);
+        var column = guess.charAt(1);
+
+       
     }
     return null;
 }
