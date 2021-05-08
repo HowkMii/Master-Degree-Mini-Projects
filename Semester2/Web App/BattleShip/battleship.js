@@ -95,4 +95,20 @@ var model = {
         return false;
     }
 };
+var controller = {
+    guesses: 0,
+
+    processGuess: function(guess) {
+        var location = parseGuess(guess);
+        if(location){
+            this.guesses++;
+            var hit = model.fire(location);
+            if(hit && model.shipsSunk === model.numOfShips){
+                view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
+                var inputForm = document.getElementById('inputForm');
+                inputForm.outerHTML = "";
+            }
+        }
+    }
+};
 window.onload = init;
