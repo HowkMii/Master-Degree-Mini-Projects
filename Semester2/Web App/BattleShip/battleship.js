@@ -45,4 +45,8 @@ var model = {
 				                return true;
             }
         }
+	        view.displayMiss(guess);
+        view.displayMessage("You missed!");
+        return false;
+    },
 window.onload = init;
