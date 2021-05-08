@@ -6,7 +6,7 @@ var view = {
         messageArea.innerHTML = msg;
     },
     
-displayHit: function(location) {
+	displayHit: function(location) {
         var cell = document.getElementById(location);
         cell.setAttribute("class", "hit");
     },
