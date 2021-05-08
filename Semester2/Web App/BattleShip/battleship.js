@@ -57,5 +57,7 @@ var model = {
         }
         return true;
     },
-
+ generateShipLocations: function() {
+       
+    },
 window.onload = init;
