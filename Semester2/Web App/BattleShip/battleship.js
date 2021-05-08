@@ -35,5 +35,7 @@ var model = {
                     controller.guesses--;
                     return false;
                 }
-
+				ship.hits[index] = "hit";
+                view.displayHit(guess);
+                view.displayMessage("HIT!");
 window.onload = init;
