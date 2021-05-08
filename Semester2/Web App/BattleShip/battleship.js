@@ -15,5 +15,8 @@ var view = {
         cell.setAttribute("class", "miss");
     }
 };
+var model = {
+    boardSize: 7,
+    numOfShips: 3,
 
 window.onload = init;
