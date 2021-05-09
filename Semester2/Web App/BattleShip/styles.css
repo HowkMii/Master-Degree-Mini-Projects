@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: white;
 }
 div#board {
     position: relative;
@@ -16,12 +16,14 @@ div#messageArea {
     font-size: 20px;
 }
 table{
+
     position: absolute;
     left: 173px;
     top: 98px;
     border-spacing: 0px;
 }
 td{
+    color: blac
     width: 94px;
     height: 94px;
 }
