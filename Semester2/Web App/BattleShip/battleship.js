@@ -1,17 +1,18 @@
 var view = {
-  
+    //this method takes a string and displays
+    //it in the message area
     displayMessage: function(msg) {
         var messageArea = document.getElementById('messageArea');
         messageArea.innerHTML = msg;
     },
     
- 
+    //displays the result of the player's guess on the board
     displayHit: function(location) {
         var cell = document.getElementById(location);
         cell.setAttribute("class", "hit");
     },
 
-
+    //displays the result of the player's guess on the board
     displayMiss: function(location){
         var cell = document.getElementById(location);
         cell.setAttribute("class", "miss");
@@ -64,7 +65,15 @@ var model = {
         return true;
     },
 
-   
+    generateShipLocations: function() {
+        var locations;
+        for(var i=0; i<this.numOfShips; i++) {
+            do{
+                locations = this.generateShip();
+            }while(this.isColliding(locations));
+            this.ships[i].locations = locations;
+        }
+    },
 
     generateShip: function(){
         var direction = Math.floor(Math.random()*2);
