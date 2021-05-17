@@ -42,8 +42,10 @@ form input{
     font-size: 1.5em;
 }
 .hit{
+    
     background: url("ship.png") no-repeat center center;
 }
 .miss{
+   
     background: url("miss.png") no-repeat center center;
 }

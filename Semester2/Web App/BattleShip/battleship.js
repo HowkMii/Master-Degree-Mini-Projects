@@ -12,7 +12,7 @@ var view = {
         cell.setAttribute("class", "hit");
     },
 
-    //displays the result of the player's guess on the board
+    //displays the result of the player's guess on the boarde
     displayMiss: function(location){
         var cell = document.getElementById(location);
         cell.setAttribute("class", "miss");
