@@ -28,16 +28,13 @@ var model = {
                 //It's a hit
                 if(ship.hits[index]=="hit"){
                     alert("You've already hit this location! Enter some other coordinates");
-                  
                     controller.guesses--;
                     return false;
                 }
                 ship.hits[index] = "hit";
                 view.displayHit(guess);
-               
                 if(this.isSunk(ship)){
                     alert("You sank my battleship!");
-                    
                     this.shipsSunk++;
                 }
                 return true;
@@ -117,6 +114,7 @@ var controller = {
             var hit = model.fire(location);
             if(hit && model.shipsSunk === model.numOfShips){
                 view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
+                alert("You sank all my battleships, in " + this.guesses + " guesses");
                 var inputForm = document.getElementById('inputForm');
                 inputForm.outerHTML = "";
             }
@@ -129,7 +127,7 @@ function parseGuess(guess){
     var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
 
     if(guess == null || guess.length !== 2){
-        alert("Oops, please enter a letter and a number on the board.");
+        alert("please enter a letter and a number on the board. like A0");
     } else{
         guess = guess.toUpperCase();
         firstChar = guess.charAt(0);

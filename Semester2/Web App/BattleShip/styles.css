@@ -8,6 +8,13 @@ body{
     margin-left: 220px;
    
 }
+div#messageArea {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    color: rgb(83, 175, 19);
+    font-size: 20px;
+}
 .miss{
    
     background: url("miss.png") no-repeat center center;
