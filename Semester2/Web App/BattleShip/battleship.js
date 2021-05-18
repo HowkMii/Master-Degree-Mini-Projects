@@ -66,25 +66,25 @@ var model = {
 
     generateShip: function(){
         var direction = Math.floor(Math.random()*2);
-        var row, col;
+        var r, c;
         var newShipLocations=[];
 
         if(direction === 1){
             //direction is vertical
-            row = Math.floor(Math.random()* (this.boardSize- this.shipLength + 1));
-            col = Math.floor(Math.random()* (this.boardSize));
+            r = Math.floor(Math.random()* (this.boardSize- this.shipLength + 1));
+            c = Math.floor(Math.random()* (this.boardSize));
         }
         else{
-            row = Math.floor(Math.random()* (this.boardSize));
-            col = Math.floor(Math.random()* (this.boardSize - this.shipLength + 1));
+            r = Math.floor(Math.random()* (this.boardSize));
+            c = Math.floor(Math.random()* (this.boardSize - this.shipLength + 1));
         }
 
         for(var i=0; i<this.shipLength; i++){
             if(direction==1){
-                newShipLocations.push((row+i) + "" + col);
+                newShipLocations.push((r+i) + "" + c);
             }
             else{
-                newShipLocations.push(row + "" + (col+i));
+                newShipLocations.push(r + "" + (c+i));
             }
         }
         return newShipLocations;
