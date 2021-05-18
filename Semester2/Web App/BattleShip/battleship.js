@@ -1,18 +1,8 @@
 var view = {
-    //this method takes a string and displays
-    //it in the message area
-    displayMessage: function(msg) {
-        var messageArea = document.getElementById('messageArea');
-        messageArea.innerHTML = msg;
-    },
-    
-    //displays the result of the player's guess on the board
     displayHit: function(location) {
         var cell = document.getElementById(location);
         cell.setAttribute("class", "hit");
     },
-
-    //displays the result of the player's guess on the boarde
     displayMiss: function(location){
         var cell = document.getElementById(location);
         cell.setAttribute("class", "miss");
@@ -37,7 +27,8 @@ var model = {
             if(index >= 0){
                 //It's a hit
                 if(ship.hits[index]=="hit"){
-                    view.displayMessage("You've already hit this location! Enter some other coordinates");
+                    alert("You've already hit this location! Enter some other coordinates");
+                  
                     controller.guesses--;
                     return false;
                 }
@@ -45,7 +36,8 @@ var model = {
                 view.displayHit(guess);
                
                 if(this.isSunk(ship)){
-                    view.displayMessage("You sank my battleship!");
+                    alert("You sank my battleship!");
+                    
                     this.shipsSunk++;
                 }
                 return true;
@@ -147,7 +139,7 @@ function parseGuess(guess){
         if(isNaN(row) || isNaN(column)){
             alert("Oops, that isn't on the board!");
         } else if(row<0 || row > model.boardSize || column<0 || column>=model.boardSize){
-            alert("Oops, that's off the board!");
+            alert("that's off the board!");
         } else{
             return row + column;
         }
