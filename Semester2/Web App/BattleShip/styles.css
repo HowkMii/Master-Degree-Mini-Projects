@@ -1,19 +1,16 @@
 body{
     background: #e0e5ec;
 }
-#board {
+.board {
     position: relative;
     width: 768px;
     height: 647px;
     margin-left: 220px;
-   
 }
-
 .miss{
    
     background: url("miss.png") no-repeat center center;
 }
-
 table{
     position: absolute;
     left: 173px;
