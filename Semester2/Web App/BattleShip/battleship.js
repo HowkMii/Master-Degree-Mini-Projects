@@ -13,7 +13,7 @@ var model = {
     boardSize: 7,
     numOfShips: 3,
     shipsSunk: 0,
-    shipLength: 3, 
+    shipLength: 1, 
     ships: [
         { locations: [0, 0, 0], hits: ["", "", ""] },
         { locations: [0, 0, 0], hits: ["", "", ""] },
@@ -27,14 +27,14 @@ var model = {
             if(index >= 0){
                 //It's a hit
                 if(ship.hits[index]=="hit"){
-                    alert("You've already hit this location! Enter some other coordinates");
+                    
                     controller.guesses--;
                     return false;
                 }
                 ship.hits[index] = "hit";
                 view.displayHit(guess);
                 if(this.isSunk(ship)){
-                    alert("You sank my battleship!");
+                    
                     this.shipsSunk++;
                 }
                 return true;
@@ -113,7 +113,7 @@ var controller = {
             this.guesses++;
             var hit = model.fire(location);
             if(hit && model.shipsSunk === model.numOfShips){
-                view.displayMessage("You sank all my battleships, in " + this.guesses + " guesses");
+               
                 alert("You sank all my battleships, in " + this.guesses + " guesses");
                 var inputForm = document.getElementById('inputForm');
                 inputForm.outerHTML = "";
