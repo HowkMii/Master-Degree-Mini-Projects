@@ -27,21 +27,18 @@ var model = {
             if(index >= 0){
                 //It's a hit
                 if(ship.hits[index]=="hit"){
-                    
                     controller.guesses--;
                     return false;
                 }
                 ship.hits[index] = "hit";
                 view.displayHit(guess);
                 if(this.isSunk(ship)){
-                    
                     this.shipsSunk++;
                 }
                 return true;
             }
         }
         view.displayMiss(guess);
-        
         return false;
     },
 
@@ -68,9 +65,7 @@ var model = {
         var direction = Math.floor(Math.random()*2);
         var r, c;
         var newShipLocations=[];
-
         if(direction === 1){
-            //direction is vertical
             r = Math.floor(Math.random()* (this.boardSize- this.shipLength + 1));
             c = Math.floor(Math.random()* (this.boardSize));
         }
@@ -95,7 +90,6 @@ var model = {
             var ship = this.ships[i];
             for(var j=0; j<inputlocations.length; j++){
                 if(ship.locations.indexOf(inputlocations[j])>=0){
-                    //this means the ith inputLocation is already occupied.
                     return true;
                 }
             }
@@ -115,14 +109,13 @@ var controller = {
             if(hit && model.shipsSunk === model.numOfShips){
                
                 alert("You sank all my battleships, in " + this.guesses + " guesses");
+                window.location.reload();
                 var inputForm = document.getElementById('inputForm');
                 inputForm.outerHTML = "";
             }
         }
     }
 };
-
-//helper function
 function parseGuess(guess){
     var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
 
@@ -144,7 +137,6 @@ function parseGuess(guess){
     }
     return null;
 }
-
 function init() {
     var fireButton = document.getElementById('fireButton');
     fireButton.onclick = handleFireButton;
@@ -158,9 +150,7 @@ function init() {
 function handleFireButton() {
     var guessInput = document.getElementById('guessInput');
     var guess = guessInput.value;
-
     controller.processGuess(guess);
-
     guessInput.value = ""; // clears the form field.
 }
 
@@ -171,5 +161,4 @@ function handleKeyPress(e) {
         return false; // so the form does not submit itself.
     }
 }
-
 window.onload = init;
