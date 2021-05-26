@@ -8,15 +8,19 @@ body{
     margin-left: 220px;
 }
 .miss{
-   
-    background: url("miss.png") no-repeat center center;
+
+    background: url("../BattleShip/img/miss.png") no-repeat center center;
+}
+.close{
+
+    background: url("../BattleShip/img/close.png") no-repeat center center;
 }
 table{
     position: absolute;
     left: 173px;
     top: 20px;
     border-spacing: 0px;
-    border: 0.1px solid white;  
+    border: 0.1px solid white;
     border-color:black;
     box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6),
   -9px -9px 16px rgba(255, 255, 255, 0.6);
@@ -28,13 +32,13 @@ td{
     font-weight: bold;
 
     height: 60px;
-    border: 0.1px solid white;  
+    border: 0.1px solid white;
     border-color:rgb(75, 75, 75);
     box-shadow: 3px 3px 4px rgba(163, 177, 198, 0.6);
 }
 .hit{
-    
-    background: url("ship.png") no-repeat center center;
+
+    background: url("../BattleShip/img/ship.png") no-repeat center center;
 }
 form{
     position: absolute;
@@ -49,4 +53,3 @@ form input{
     font-size: 1.5em;
     width: 60px;
 }
-

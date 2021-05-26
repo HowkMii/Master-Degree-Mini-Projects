@@ -1,54 +1,106 @@
-var view = {
-    displayHit: function(location) {
-        var cell = document.getElementById(location);
-        cell.setAttribute("class", "hit");
-    },
-    displayMiss: function(location){
-        var cell = document.getElementById(location);
-        cell.setAttribute("class", "miss");
-    }
-};
+
+
+
+
 
 var model = {
     boardSize: 7,
     numOfShips: 3,
     shipsSunk: 0,
-    shipLength: 1, 
     ships: [
-        { locations: [0, 0, 0], hits: ["", "", ""] },
-        { locations: [0, 0, 0], hits: ["", "", ""] },
-        { locations: [0, 0, 0], hits: ["", "", ""] }
+        { locations: [0], hits: [""] },
+        { locations: [0], hits: [""] },
+        { locations: [0], hits: [""] }
     ],
 
     fire: function(guess) {
-        for(var i=0; i<this.numOfShips; i++){
-            var ship = this.ships[i];
-            var index = ship.locations.indexOf(guess);
-            if(index >= 0){
+            var ship0 = this.ships[0];
+            var index0 = ship0.locations.indexOf(guess);
+            var loc0 = ship0.locations[0];
+
+            var ship1 = this.ships[1];
+            var index1 = ship1.locations.indexOf(guess);
+            var loc1 = ship1.locations[0];
+
+            var ship2 = this.ships[2];
+            var index2 = ship2.locations.indexOf(guess);
+            var loc2 = ship2.locations[0];
+
+
+            console.log(loc0);
+            console.log(loc1);
+            console.log(loc2);
+
+            if(index0 >= 0){
                 //It's a hit
-                if(ship.hits[index]=="hit"){
+                if(ship0.hits[index0]=="hit"){
                     controller.guesses--;
                     return false;
                 }
-                ship.hits[index] = "hit";
+                ship0.hits[index0] = "hit";
                 view.displayHit(guess);
-                if(this.isSunk(ship)){
-                    this.shipsSunk++;
-                }
+                this.shipsSunk++;
                 return true;
             }
-        }
-        view.displayMiss(guess);
-        return false;
-    },
 
-    isSunk: function(ship){
-        for(var i =0; i<this.shipLength; i++){
-            if(ship.hits[i] !== "hit"){
+            if(index1 >= 0){
+                //It's a hit
+                if(ship1.hits[index1]=="hit"){
+                    controller.guesses--;
+                    return false;
+                }
+                ship1.hits[index1] = "hit";
+                view.displayHit(guess);
+                this.shipsSunk++;
+                return true;
+            }
+
+            if(index2 >= 0){
+                //It's a hit
+                if(ship2.hits[index2]=="hit"){
+                    controller.guesses--;
+                    return false;
+                }
+                ship2.hits[index2] = "hit";
+                view.displayHit(guess);
+                this.shipsSunk++;
+                return true;
+            }
+
+            guessx = parseInt(guess)//if(guessx+1 == loc || guessx+10 == loc || guessx+9 == loc || guessx+11 == loc || guessx-1 == loc || guessx-10 == loc  || guessx-9 == loc  || guessx-11 == loc){
+
+            if(guessx+1 == loc0 || guessx+10 == loc0 || guessx+9 == loc0 || guessx+11 == loc0 || guessx-1 == loc0 || guessx-10 == loc0  || guessx-9 == loc0  || guessx-11 == loc0){
+                if(ship0.hits[0]=="hit"){
+                    view.displayMiss(guess);
+                    return false;
+                }
+                view.displayClose(guess);
                 return false;
             }
-        }
-        return true;
+            if(guessx+1 == loc1 || guessx+10 == loc1 || guessx+9 == loc1 || guessx+11 == loc1 || guessx-1 == loc1 || guessx-10 == loc1  || guessx-9 == loc1  || guessx-11 == loc1){
+                if(ship1.hits[0]=="hit"){
+                    view.displayMiss(guess);
+                    return false;
+                }
+                view.displayClose(guess);
+                return false;
+            }
+            if(guessx+1 == loc2 || guessx+10 == loc2 || guessx+9 == loc2 || guessx+11 == loc2 || guessx-1 == loc2 || guessx-10 == loc2  || guessx-9 == loc2  || guessx-11 == loc2){
+                if(ship2.hits[0]=="hit"){
+                    view.displayMiss(guess);
+                    return false;
+                }
+                view.displayClose(guess);
+                return false;
+            }
+
+
+
+
+
+
+        view.displayMiss(guess);
+        return false;
     },
 
     generateShipLocations: function() {
@@ -62,26 +114,11 @@ var model = {
     },
 
     generateShip: function(){
-        var direction = Math.floor(Math.random()*2);
         var r, c;
         var newShipLocations=[];
-        if(direction === 1){
-            r = Math.floor(Math.random()* (this.boardSize- this.shipLength + 1));
-            c = Math.floor(Math.random()* (this.boardSize));
-        }
-        else{
-            r = Math.floor(Math.random()* (this.boardSize));
-            c = Math.floor(Math.random()* (this.boardSize - this.shipLength + 1));
-        }
-
-        for(var i=0; i<this.shipLength; i++){
-            if(direction==1){
-                newShipLocations.push((r+i) + "" + c);
-            }
-            else{
-                newShipLocations.push(r + "" + (c+i));
-            }
-        }
+        r = Math.floor(Math.random()* (this.boardSize- 2));
+        c = Math.floor(Math.random()* (this.boardSize));
+        newShipLocations.push(r + "" + c);
         return newShipLocations;
     },
 
@@ -98,6 +135,8 @@ var model = {
     }
 };
 
+
+
 var controller = {
     guesses: 0,
 
@@ -107,8 +146,8 @@ var controller = {
             this.guesses++;
             var hit = model.fire(location);
             if(hit && model.shipsSunk === model.numOfShips){
-               
-                alert("You sank all my battleships, in " + this.guesses + " guesses");
+
+                alert("YOU WON... YOUR ACCURACY IS : " +(100-((this.guesses*100)/49))+ " %");
                 window.location.reload();
                 var inputForm = document.getElementById('inputForm');
                 inputForm.outerHTML = "";
@@ -137,6 +176,9 @@ function parseGuess(guess){
     }
     return null;
 }
+
+
+
 function init() {
     var fireButton = document.getElementById('fireButton');
     fireButton.onclick = handleFireButton;
@@ -162,3 +204,17 @@ function handleKeyPress(e) {
     }
 }
 window.onload = init;
+var view = {
+    displayHit: function(location) {
+        var cell = document.getElementById(location);
+        cell.setAttribute("class", "hit");
+    },
+    displayMiss: function(location){
+        var cell = document.getElementById(location);
+        cell.setAttribute("class", "miss");
+    },
+    displayClose: function(location){
+        var cell = document.getElementById(location);
+        cell.setAttribute("class", "close");
+    }
+};
