@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="708.0" prefWidth="742.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label layoutX="530.0" layoutY="522.0" text="entrer argent" />
+      <Circle fill="WHITE" layoutX="605.0" layoutY="330.0" radius="26.0" stroke="WHITE" strokeType="INSIDE" />
+      <Circle fill="WHITE" layoutX="394.0" layoutY="234.0" radius="26.0" stroke="WHITE" strokeType="INSIDE" />
+       <Label fx:id="l4" layoutX="600.0" layoutY="315.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="l2" layoutX="389.0" layoutY="219.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle fill="WHITE" layoutX="160.0" layoutY="168.0" radius="26.0" stroke="WHITE" strokeType="INSIDE" />
+      <Label fx:id="l1" layoutX="155.0" layoutY="153.0" text="4" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Circle fill="WHITE" layoutX="203.0" layoutY="79.0" radius="26.0" stroke="WHITE" strokeType="INSIDE" />
+      <Label fx:id="l0" layoutX="198.0" layoutY="64.0" text="0" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="79.0" layoutX="530.0" layoutY="154.0" stroke="WHITE" strokeType="INSIDE" width="11.0" />
+      <Circle fill="WHITE" layoutX="364.0" layoutY="433.0" radius="26.0" stroke="WHITE" strokeType="INSIDE" />
+      <Label fx:id="l3" layoutX="358.0" layoutY="418.0" text="1" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="84.0" layoutY="39.0" stroke="WHITE" strokeType="INSIDE" width="11.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="79.0" layoutX="305.0" layoutY="228.0" stroke="WHITE" strokeType="INSIDE" width="11.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="455.0" layoutY="263.0" stroke="WHITE" strokeType="INSIDE" width="11.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="80.0" layoutX="555.0" layoutY="432.0" stroke="WHITE" strokeType="INSIDE" width="11.0" />
+    <!--
+        <JFXButton buttonType="RAISED" layoutX="563.0" layoutY="474.0" onAction="#onStartSimulation" prefHeight="40.0" prefWidth="176.0" style="-fx-background-color: #2196f3;" text="Start simulation" textFill="WHITE">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </JFXButton>
+        -->
+    </children>
+</AnchorPane>
